@@ -1,0 +1,24 @@
+Exercício 10: Verificação de Login
+Crie um programa que peça ao usuário um nome de usuário e uma senha e verifique se ambos
+estão corretos. Se o nome de usuário for 'admin' e a senha for '12345', exiba 'Acesso concedido'.
+Caso contrário, exiba 'Acesso negado'.
+
+import java.util.Scanner;
+
+public class Login {
+
+	public static void main(String[] args) {
+		Scanner leitura = new Scanner(System.in);
+
+		System.out.println("Nome de usuário: ");
+        String usuario = leitura.nextLine();
+        System.out.println("Senha: ");
+        int senha = leitura.nextInt();
+   
+        if (usuario.equals("admin") && senha == 12345) {
+        	System.out.println("Acesso concedido.");
+        } else {
+        	System.out.println("Acesso negado.");
+        }
+	}
+}
