@@ -1,0 +1,31 @@
+Exercício 4: Classificação de Idade
+Escreva um programa que categorize uma pessoa com base na sua idade.
+Menor que 13: Criança
+13-17: Adolescente
+18-64: Adulto
+65 ou mais: Idoso
+
+import java.util.Scanner;
+
+public class Idade {
+
+	public static void main(String[] args) {
+		Scanner leitura = new Scanner(System.in);
+
+		System.out.println("Qual é a sua idade? ");
+        int idade = leitura.nextInt();
+        
+        if (idade < 13){
+        	System.out.println("Criança.");
+        	
+        } else if (idade >= 13 && idade <= 17) {
+        	System.out.println("Adolescente.");
+     
+        } else if (idade >= 18 && idade <= 64) {
+        	System.out.println("Adulto.");
+        	
+        } else if (idade >= 65) {
+        	System.out.println("Idoso.");
+        }
+	}
+}
