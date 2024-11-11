@@ -1,0 +1,22 @@
+Exercício 2: Par ou Ímpar
+Crie um programa que leia um número inteiro e verifique se ele é par ou ímpar. Se o número for
+divisível por 2, exiba 'Número par'. Caso contrário, exiba 'Número ímpar'.
+
+import java.util.Scanner;
+
+public class ParImpar {
+
+	public static void main(String[] args) {
+		Scanner leitura = new Scanner(System.in);
+
+		System.out.println("Digite um número inteiro: ");
+		int resposta = leitura.nextInt();
+		int resto = resposta % 2;
+		
+		if (resto == 0) {
+			System.out.println("O número é par.");
+			} else {
+				System.out.println("O número é ímpar.");
+			}
+	}
+}
