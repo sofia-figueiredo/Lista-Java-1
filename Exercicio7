@@ -1,0 +1,23 @@
+Exercício 7: Verificação de Palíndromo
+Crie um programa que verifique se uma palavra é um palíndromo. Se a palavra for igual quando lida
+de trás para frente, exiba 'É um palíndromo'. Caso contrário, exiba 'Não é um palíndromo'.
+
+import java.util.Scanner;
+
+public class Palindromo {
+
+	public static void main(String[] args) {
+		Scanner leitura = new Scanner(System.in);
+
+		System.out.println(String.format("Digite uma palavra: "));
+        String palavra = leitura.nextLine();
+        
+        String palavraInvertida = new StringBuilder(palavra).reverse().toString();
+
+        if (palavra.equalsIgnoreCase(palavraInvertida)) {
+            System.out.println("A palavra é um palíndromo.");
+        } else {
+            System.out.println("A palavra não é um palíndromo.");
+        }
+	}
+}
