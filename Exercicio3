@@ -1,0 +1,39 @@
+Exercício 3: Avaliação de Notas
+Desenvolva um programa que peça ao usuário uma nota de 0 a 100 e mostre a letra
+correspondente à avaliação.
+90-100: A
+80-89: B
+70-79: C
+60-69: D
+0-59: F
+
+import java.util.Scanner;
+
+public class Notas {
+
+	public static void main(String[] args) {
+		Scanner leitura = new Scanner(System.in);
+
+		System.out.println("Digite uma nota de 0 a 100: ");
+        int nota = leitura.nextInt();
+        
+        if (nota >= 90 && nota <= 100){
+        	System.out.println("A");
+        	
+        } else if (nota >= 80 && nota < 90) {
+        	System.out.println("B");
+     
+        } else if (nota >= 70 && nota < 80) {
+        	System.out.println("C");
+        	
+        } else if (nota >= 60 && nota < 70) {
+        	System.out.println("D");
+
+        } else if (nota >= 0 && nota < 60) {
+        	System.out.println("F");
+        	
+        } else if (nota < 0 || nota > 100) {
+        	System.out.println("Nota inválida. Por favor, digite uma nota de 0 a 100."); 
+        }
+	}
+}
