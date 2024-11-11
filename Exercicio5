@@ -1,0 +1,66 @@
+Exercício 5: Calculadora Simples
+Crie um programa que leia dois números e uma operação (+, -, *, /) e calcule o resultado.
+Certifique-se de que o divisor não seja zero quando a operação for divisão.
+
+import java.util.Scanner;
+
+public class Calculadora {
+	
+	public static void main(String[] args) {
+		Scanner leitura = new Scanner(System.in);
+		
+		int opcao = 0;
+		
+        while (opcao != 5) {
+            System.out.println("Calculadora");
+            System.out.println("1 - Adição");
+            System.out.println("2 - Subtração");
+            System.out.println("3 - Multiplicação");
+            System.out.println("4 - Divisão");
+            System.out.println("5 - Sair");
+            System.out.println("Digite a opção desejada: ");    
+            
+            opcao = leitura.nextInt();
+            
+            if (opcao == 1){
+            	System.out.println("Digite o primeiro número: ");
+            	double num1 = leitura.nextDouble();
+            	System.out.println("Digite o segundo número: ");
+            	double num2 = leitura.nextDouble();
+            	double soma = num1 + num2;
+            	System.out.println(num1 + " + " + num2 + " = " + soma);
+            	
+            } else if (opcao == 2) {
+            	System.out.println("Digite o primeiro número: ");
+            	double num1 = leitura.nextDouble();
+            	System.out.println("Digite o segundo número: ");
+            	double num2 = leitura.nextDouble();
+            	double subtracao = num1 - num2;
+            	System.out.println(num1 + " - " + num2 + " = " + subtracao);
+            	
+            } else if (opcao == 3) {
+            	System.out.println("Digite o primeiro número: ");
+            	double num1 = leitura.nextDouble();
+            	System.out.println("Digite o segundo número: ");
+            	double num2 = leitura.nextDouble();
+            	double multiplicacao = num1 * num2;
+            	System.out.println(num1 + " x " + num2 + " = " + multiplicacao);
+            	
+            } else if (opcao == 4) {
+                System.out.print("Digite o primeiro número: ");
+                double num1 = leitura.nextDouble();
+                System.out.print("Digite o segundo número: ");
+                double num2 = leitura.nextDouble();
+                if (num2 != 0) {
+                    double divisao = num1 / num2;
+                    System.out.println(num1 + " / " + num2 + " = " + divisao);
+                } else {
+                    System.out.println("Erro: Divisão por zero não é permitida.");
+                }
+	
+            } else if (opcao != 5) {
+            	System.out.println("Opção inválida"); 
+            }
+        }
+	}
+}
