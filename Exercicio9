@@ -1,0 +1,29 @@
+Exercício 9: Verificação de Caracteres em uma String
+Escreva um programa que verifique se uma determinada string contém um determinado caractere.
+Se o caractere estiver presente na string, exiba 'Caractere encontrado'. Caso contrário, exiba
+'Caractere não encontrado'.
+
+import java.util.Scanner;
+
+public class Caractere {
+
+	public static void main(String[] args) {
+		Scanner leitura = new Scanner(System.in);
+		
+		System.out.println("Digite uma palavra: ");
+		String palavra = leitura.nextLine();
+		
+		System.out.println("Qual caractere quer encontrar? ");
+		char caractere = leitura.next().charAt(0);
+		
+		String palavraMinuscula = palavra.toLowerCase();
+        char caractereMinusculo = Character.toLowerCase(caractere);
+		
+		if (palavraMinuscula.indexOf(caractereMinusculo) >= 0) {
+            System.out.println("Caractere encontrado.");
+        } else {
+            System.out.println("Caractere não encontrado.");
+        }
+	}
+}
+		
